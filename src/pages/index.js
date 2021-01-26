@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import db from '../../db.json';
 import Widget from '../components/Widget'
-// import QuizLogo from '../src/components/QuizLogo'
+ import QuizLogo from '../components/QuizLogo'
 import QuizBackground from '../components/QuizBackground'
-// import Footer from '../src/components/Footer'
-// import GitHubCorner from '../src/components/GitHubCorner'
+import Footer from '../components/Footer'
+import GitHubCorner from '../components/GitHubCorner'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-      {/* <QuizLogo /> */}
+      <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -38,8 +38,9 @@ export default function Home() {
             <p>lorem ipsum dolor sit amet...</p>
           </Widget.Content>
         </Widget>
-        {/* <Footer /> */}
+        <Footer />
       </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/AmandaCarvalho1989" />
     </QuizBackground>
   );
 }
